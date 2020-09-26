@@ -1,9 +1,0 @@
-version: '3.5'
-services:
-  tile_png:
-    build: .
-    volumes:
-        - ~/.config/gcloud:/root/.config/gcloud
-        - ./input_folder:/input_folder
-        - ./output_folder:/output_folder
-    command: python3 tile_png.py Foo /input_folder/in1 Bar /input_folder/in2 Baz,Boo /input_folder/in3 /output_folder

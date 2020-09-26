@@ -1,9 +1,0 @@
-version: '3.5'
-services:
-  create_video:
-    build: .
-    volumes:
-        - ~/.config/gcloud:/root/.config/gcloud
-        - ../../../testharness/data/20:/test
-        - ./output_folder:/output_folder
-    command: python3 create_video.py /test/unpacked/camera imgs /test/in_process/timestamps/ /output_folder
