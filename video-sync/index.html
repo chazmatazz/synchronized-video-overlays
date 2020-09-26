@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/shaka-player/3.0.4/shaka-player.ui.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/shaka-player/3.0.4/controls.css">
+
+    <script type="text/javascript" src="processor1.js"></script>
+    <title>Ottometric UI</title>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <td>
+    <div id="video-container" data-shaka-player-container>
+      <video data-shaka-player id="video" 
+        width="320"
+        poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+        autoplay loop controls></video>
+    </div>   
+  </td>
+    <td>
+    <div id="tile-container">
+      <canvas id="canvas" width="1824" height="988">
+      </canvas>
+      <div id="metric-container" height="100"></div>
+      <div id="control-container">
+      </div>
+    </div>
+    </td>
+    </tr>
+    </table>
+    
+    
+  </body>
+</html>

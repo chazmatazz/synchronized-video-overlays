@@ -1,0 +1,1 @@
+base_encode: ffmpeg -framerate 100/3 -f image2 -i test_create_video/imgs/000000%4d.png -g 72 -keyint_min 72 -sc_threshold 0 -c:v libvpx-vp9 -pix_fmt yuva420p -lossless 1 output/test_create_video_out1/output.webm

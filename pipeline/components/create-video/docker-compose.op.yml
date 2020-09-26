@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  create_video_op:
+    build: .
+    volumes:
+      - ~/.config/gcloud:/root/.config/gcloud # needed for glb_converter_op
+      - ./inputs:/tmp # override internal folder, save to disk
+    command: ['python3', 'create_video_op.py', '/create_video.py',
+       'test_version', 'in_process/video', 'gs://om-ofs/poc_1.2/sections', 20 0 0 /output_folder gs://om-ofs/poc_1.2/sections/20/unpacked/camera/976ca21104ff52e59cad7bfb291100ed921cef48c07aa1fa01077f33178af788.tar.gz gs://om-ofs/poc_1.2/sections/20/in_process/timestamps/6062a2683140364667f13bbddc19adf033096a7787b4177c5eb4d72a1e319df7.tar.gz]
